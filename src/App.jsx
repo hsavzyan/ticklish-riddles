@@ -23,6 +23,15 @@ function App() {
     }
   }, [riddles, gameStarted]);
 
+  const returnToHomepage = () => {
+    setRiddles(riddlesData.riddles);
+    setCurrentRiddle(null);
+    setUserChoice(null);
+    setCorrect(false);
+    setShowFeedbackModal(false);
+    setGameStarted(false);
+  };
+
   const resetGame = () => {
     setRiddles(riddlesData.riddles);
     setCurrentRiddle(null);
@@ -77,7 +86,7 @@ function App() {
         />
       )}
       {riddles.length === 0 && !showFeedbackModal && gameStarted && (
-        <EndScreen resetGame={resetGame} />
+        <EndScreen resetGame={resetGame} returnToHomepage={returnToHomepage} />
       )}
     </div>
   );
