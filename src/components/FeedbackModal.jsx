@@ -9,10 +9,8 @@ function FeedbackModal({
     <div>
       <h2>
         {correct
-          ? riddle.correctFeedback
-          : userChoice !== riddle.correctChoiceIndex
-          ? riddle.incorrectFeedback[userChoice]
-          : ""}
+          ? riddle.choices[riddle.correctChoiceIndex].feedback
+          : riddle.choices[userChoice].feedback}
       </h2>
       <img
         src={

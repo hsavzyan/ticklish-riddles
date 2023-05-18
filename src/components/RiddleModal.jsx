@@ -5,7 +5,7 @@ function RiddleModal({ riddle, handleUserChoice }) {
       <img src={riddle.image.src} alt={riddle.image.alt} />
       {riddle.choices.map((choice, index) => (
         <button key={index} onClick={() => handleUserChoice(index)}>
-          {choice}
+          {choice.text}
         </button>
       ))}
     </div>
