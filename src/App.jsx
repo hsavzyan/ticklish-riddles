@@ -83,6 +83,7 @@ function App() {
           correct={correct}
           riddle={currentRiddle}
           moveToNextRiddle={moveToNextRiddle}
+          userChoice={userChoice}
         />
       )}
       {riddles.length === 0 && !showFeedbackModal && gameStarted && (

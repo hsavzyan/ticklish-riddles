@@ -1,7 +1,13 @@
-function FeedbackModal({ correct, riddle, moveToNextRiddle }) {
+function FeedbackModal({ correct, riddle, moveToNextRiddle, userChoice }) {
   return (
     <div>
-      <h2>{correct ? riddle.correctFeedback : riddle.incorrectFeedback}</h2>
+      <h2>
+        {correct
+          ? riddle.correctFeedback
+          : userChoice !== riddle.correctChoiceIndex
+          ? riddle.incorrectFeedback[userChoice]
+          : ""}
+      </h2>
       <img
         src={
           correct
