@@ -1,4 +1,10 @@
-function FeedbackModal({ correct, riddle, moveToNextRiddle, userChoice }) {
+function FeedbackModal({
+  correct,
+  riddle,
+  moveToNextRiddle,
+  userChoice,
+  resetUserChoice,
+}) {
   return (
     <div>
       <h2>
@@ -20,6 +26,7 @@ function FeedbackModal({ correct, riddle, moveToNextRiddle, userChoice }) {
             : riddle.incorrectAnswerImage.alt
         }
       />
+      {!correct && <button onClick={resetUserChoice}>Try Again</button>}
       <button onClick={moveToNextRiddle}>Next</button>
     </div>
   );

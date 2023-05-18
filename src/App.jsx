@@ -54,6 +54,11 @@ function App() {
     setCorrect(currentRiddle.correctChoiceIndex === choice);
   };
 
+  const resetUserChoice = () => {
+    setUserChoice(null);
+    setShowFeedbackModal(false);
+  };
+
   const moveToNextRiddle = () => {
     setShowFeedbackModal(false);
     const newRiddles = riddles.filter((r) => r.id !== currentRiddle.id);
@@ -84,6 +89,7 @@ function App() {
           riddle={currentRiddle}
           moveToNextRiddle={moveToNextRiddle}
           userChoice={userChoice}
+          resetUserChoice={resetUserChoice}
         />
       )}
       {riddles.length === 0 && !showFeedbackModal && gameStarted && (
