@@ -3,6 +3,7 @@ import Homepage from "./components/Homepage";
 import RiddleModal from "./components/RiddleModal";
 import FeedbackModal from "./components/FeedbackModal";
 import riddlesData from "./riddles.json";
+import EndScreen from "./components/EndScreen";
 
 function App() {
   const [riddles, setRiddles] = useState([]);
@@ -10,12 +11,30 @@ function App() {
   const [userChoice, setUserChoice] = useState(null);
   const [correct, setCorrect] = useState(false);
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
 
   useEffect(() => {
     setRiddles(riddlesData.riddles);
   }, []);
 
+  useEffect(() => {
+    if (gameStarted && riddles.length) {
+      startGame();
+    }
+  }, [riddles, gameStarted]);
+
+  const resetGame = () => {
+    setRiddles(riddlesData.riddles);
+    setCurrentRiddle(null);
+    setUserChoice(null);
+    setCorrect(false);
+    setShowFeedbackModal(false);
+    setGameStarted(false);
+    startGame();
+  };
+
   const startGame = () => {
+    setGameStarted(true);
     const randomRiddle = riddles[Math.floor(Math.random() * riddles.length)];
     setCurrentRiddle(randomRiddle);
   };
@@ -41,7 +60,9 @@ function App() {
 
   return (
     <div className="App">
-      {!currentRiddle && <Homepage startGame={startGame} />}
+      {!currentRiddle && !showFeedbackModal && !gameStarted && (
+        <Homepage startGame={startGame} />
+      )}
       {currentRiddle && !showFeedbackModal && (
         <RiddleModal
           riddle={currentRiddle}
@@ -54,6 +75,9 @@ function App() {
           riddle={currentRiddle}
           moveToNextRiddle={moveToNextRiddle}
         />
+      )}
+      {riddles.length === 0 && !showFeedbackModal && gameStarted && (
+        <EndScreen resetGame={resetGame} />
       )}
     </div>
   );
