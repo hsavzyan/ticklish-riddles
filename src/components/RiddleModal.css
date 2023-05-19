@@ -1,49 +1,78 @@
 .riddle-modal {
-  width: 60%;
-  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Make it semi-transparent */
-  backdrop-filter: blur(5px); /* Blurry backdrop for modern browsers */
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  grid-template-areas:
+    "question image"
+    "choices1 choices2";
 }
 
 .riddle-question {
-  font-size: 2.5em; /* Increase font size */
+  grid-area: question;
+  font-size: 1.5em;
   font-weight: bold;
-  color: #ff4500; /* Same as site-title color */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Same as site-title shadow */
-  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .riddle-image {
-  width: 80%; /* Reduce size for better focus on text */
+  grid-area: image;
+  max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  margin-bottom: 20px; /* Margin for spacing */
+  align-self: center;
 }
 
 .choices-container {
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  padding: 20px 0;
+  gap: 10px;
+}
+
+.choices-container:nth-child(odd) {
+  grid-area: choices1;
+}
+
+.choices-container:nth-child(even) {
+  grid-area: choices2;
 }
 
 .choice-btn {
-  flex-basis: 45%;
-  margin: 2%;
-  background-color: #32cd32; /* Same as general button color */
-  color: white;
-  font-size: 1.2em; /* Larger font size for readability */
+  padding: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
   transition: 0.3s;
-  font-weight: bold; /* Bold for better readability */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Same as general button shadow */
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff4500;
+  text-align: center;
 }
 
 .choice-btn:hover {
-  transform: scale(1.1); /* Same hover effect as general buttons */
-  background-color: #228b22; /* Slightly darker green on hover */
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .riddle-modal {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "question"
+      "image"
+      "choices1"
+      "choices2";
+  }
 }
