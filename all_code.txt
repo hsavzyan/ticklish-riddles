@@ -1,0 +1,192 @@
+/* eslint-disable react/prop-types */
+
+function RiddleModal({ riddle, handleUserChoice }) {
+  return (
+    <div>
+      <h2>{riddle.question}</h2>
+      <img src={riddle.image.src} alt={riddle.image.alt} />
+      {riddle.choices.map((choice, index) => (
+        <button key={index} onClick={() => handleUserChoice(index)}>
+          {choice.text}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+export default RiddleModal;
+function Homepage({ startGame }) {
+  return (
+    <div>
+      <h1>Ticklish Riddles</h1>
+      <p>Think, laugh, repeat!</p>
+      <p>
+        Are you ready for a rollercoaster ride of riddles? Welcome to Ticklish
+        Riddles, where every question is a tickle and every answer a belly
+        laugh. Fasten your seatbelts, hold onto your funny bones, and let's get
+        rolling!
+      </p>
+      <button onClick={startGame}>Start</button>
+    </div>
+  );
+}
+export default Homepage;
+/* eslint-disable react/prop-types */
+
+function FeedbackModal({
+  correct,
+  riddle,
+  moveToNextRiddle,
+  userChoice,
+  resetUserChoice,
+}) {
+  return (
+    <div>
+      <h2>
+        {correct
+          ? riddle.choices[riddle.correctChoiceIndex].feedback
+          : riddle.choices[userChoice].feedback}
+      </h2>
+      <img
+        src={
+          correct
+            ? riddle.correctAnswerImage.src
+            : riddle.incorrectAnswerImage.src
+        }
+        alt={
+          correct
+            ? riddle.correctAnswerImage.alt
+            : riddle.incorrectAnswerImage.alt
+        }
+      />
+      {!correct && <button onClick={resetUserChoice}>Try Again</button>}
+      <button onClick={moveToNextRiddle}>Next</button>
+    </div>
+  );
+}
+
+export default FeedbackModal;
+function EndScreen({ resetGame, returnToHomepage }) {
+  return (
+    <div>
+      <h1>Congratulations!</h1>
+      <p>You've gone through all the riddles!</p>
+      <img src="path_to_your_image.jpg" alt="Congratulations" />
+      <button onClick={resetGame}>Play Again</button>
+      <button onClick={returnToHomepage}>Return to Homepage</button>
+    </div>
+  );
+}
+
+export default EndScreen;
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+import { useState, useEffect } from "react";
+import Homepage from "./components/Homepage";
+import RiddleModal from "./components/RiddleModal";
+import FeedbackModal from "./components/FeedbackModal";
+import riddlesData from "./riddles.json";
+import EndScreen from "./components/EndScreen";
+
+function App() {
+  const [riddles, setRiddles] = useState([]);
+  const [currentRiddle, setCurrentRiddle] = useState(null);
+  const [userChoice, setUserChoice] = useState(null);
+  const [correct, setCorrect] = useState(false);
+  const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
+
+  useEffect(() => {
+    setRiddles(riddlesData.riddles);
+  }, []);
+
+  useEffect(() => {
+    if (gameStarted && riddles.length) {
+      startGame();
+    }
+  }, [riddles, gameStarted]);
+
+  const returnToHomepage = () => {
+    setRiddles(riddlesData.riddles);
+    setCurrentRiddle(null);
+    setUserChoice(null);
+    setCorrect(false);
+    setShowFeedbackModal(false);
+    setGameStarted(false);
+  };
+
+  const resetGame = () => {
+    setRiddles(riddlesData.riddles);
+    setCurrentRiddle(null);
+    setUserChoice(null);
+    setCorrect(false);
+    setShowFeedbackModal(false);
+    setGameStarted(false);
+    startGame();
+  };
+
+  const startGame = () => {
+    setGameStarted(true);
+    const randomRiddle = riddles[Math.floor(Math.random() * riddles.length)];
+    setCurrentRiddle(randomRiddle);
+  };
+
+  const handleUserChoice = (choice) => {
+    setUserChoice(choice);
+    setShowFeedbackModal(true);
+    setCorrect(currentRiddle.correctChoiceIndex === choice);
+  };
+
+  const resetUserChoice = () => {
+    setUserChoice(null);
+    setShowFeedbackModal(false);
+  };
+
+  const moveToNextRiddle = () => {
+    setShowFeedbackModal(false);
+    const newRiddles = riddles.filter((r) => r.id !== currentRiddle.id);
+    setRiddles(newRiddles);
+    if (newRiddles.length > 0) {
+      const randomRiddle =
+        newRiddles[Math.floor(Math.random() * newRiddles.length)];
+      setCurrentRiddle(randomRiddle);
+    } else {
+      setCurrentRiddle(null);
+    }
+  };
+
+  return (
+    <div className="App">
+      {!currentRiddle && !showFeedbackModal && !gameStarted && (
+        <Homepage startGame={startGame} />
+      )}
+      {currentRiddle && !showFeedbackModal && (
+        <RiddleModal
+          riddle={currentRiddle}
+          handleUserChoice={handleUserChoice}
+        />
+      )}
+      {showFeedbackModal && (
+        <FeedbackModal
+          correct={correct}
+          riddle={currentRiddle}
+          moveToNextRiddle={moveToNextRiddle}
+          userChoice={userChoice}
+          resetUserChoice={resetUserChoice}
+        />
+      )}
+      {riddles.length === 0 && !showFeedbackModal && gameStarted && (
+        <EndScreen resetGame={resetGame} returnToHomepage={returnToHomepage} />
+      )}
+    </div>
+  );
+}
+
+export default App;

@@ -4,7 +4,7 @@
       "id": 1,
       "question": "Oh, you'll love this! I'm filled with keys but can't open a single door. I can produce melodies but can't sing a song. What am I, a magical creature from the land of impossibility?",
       "image": {
-        "src": "path/to/absurdImage1.jpg",
+        "src": "/assets/1.png",
         "alt": "A dinosaur trying to open a door with a bunch of keys."
       },
       "choices": [
@@ -28,7 +28,7 @@
       "correctChoiceIndex": 2,
       "hint": "Think about something that can make a symphony, but can't voice out a single word.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage1.jpg",
+        "src": "/assets/1cor.png",
         "alt": "A dinosaur playing a grand piano."
       },
       "incorrectAnswerImage": {
@@ -40,7 +40,7 @@
       "id": 2,
       "question": "Here's a real humdinger for you! I'm always in front of you, but you'll never see me. Am I a ghost? A mirage? What am I?",
       "image": {
-        "src": "path/to/absurdImage2.jpg",
+        "src": "/assets/2.png",
         "alt": "A unicorn looking into a mirror but seeing nothing."
       },
       "choices": [
@@ -64,7 +64,7 @@
       "correctChoiceIndex": 1,
       "hint": "Think about something that's always ahead, but no crystal ball can show.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage2.jpg",
+        "src": "/assets/2cor.png",
         "alt": "A unicorn flipping a calendar page."
       },
       "incorrectAnswerImage": {
@@ -76,7 +76,7 @@
       "id": 3,
       "question": "Here's something to tickle your brain! I'm full of holes, yet I'm full of water. Am I a leaky water balloon or what?",
       "image": {
-        "src": "path/to/absurdImage4.jpg",
+        "src": "/assets/3.png",
         "alt": "A confused alien holding a leaky water balloon."
       },
       "choices": [
@@ -100,7 +100,7 @@
       "correctChoiceIndex": 2,
       "hint": "Think about something that can absorb and hold water despite being full of holes.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage4.jpg",
+        "src": "/assets/3cor.png",
         "alt": "An alien squeezing a sponge filled with water."
       },
       "incorrectAnswerImage": {
@@ -112,7 +112,7 @@
       "id": 4,
       "question": "Alright, here's a quirky one! I can fly without wings, I can cry without eyes. Everywhere I go, darkness follows me. What am I, a superhero with a very specific set of powers?",
       "image": {
-        "src": "path/to/absurdImage5.jpg",
+        "src": "/assets/4.png",
         "alt": "A superhero with wings and a giant pair of crying eyes."
       },
       "choices": [
@@ -136,7 +136,7 @@
       "correctChoiceIndex": 1,
       "hint": "Think of something that's up in the sky, can 'cry', and can 'fly'.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage5.jpg",
+        "src": "/assets/4cor.png",
         "alt": "The superhero holding an umbrella under a crying rain cloud."
       },
       "incorrectAnswerImage": {
@@ -148,7 +148,7 @@
       "id": 5,
       "question": "Ok, here's a real puzzle for you! I have cities but no houses, forests but no trees, rivers but no water. What am I, an eco-friendly model of Earth?",
       "image": {
-        "src": "path/to/absurdImage6.jpg",
+        "src": "/assets/5.png",
         "alt": "A squirrel looking at a globe without any physical features."
       },
       "choices": [
@@ -172,7 +172,7 @@
       "correctChoiceIndex": 1,
       "hint": "Think about something that can show all these features without actually having them.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage6.jpg",
+        "src": "/assets/5cor.png",
         "alt": "The squirrel holding a map, looking like a tiny explorer."
       },
       "incorrectAnswerImage": {
@@ -184,7 +184,7 @@
       "id": 6,
       "question": "Think hard on this one! I can be cracked, made, told, and played. What am I, a puzzle piece with a life crisis?",
       "image": {
-        "src": "path/to/absurdImage7.jpg",
+        "src": "/assets/6.png",
         "alt": "A puzzle piece pondering its life choices."
       },
       "choices": [
@@ -208,7 +208,7 @@
       "correctChoiceIndex": 1,
       "hint": "Think of something that can make you laugh. It's not a tickle!",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage7.jpg",
+        "src": "/assets/6cor.png",
         "alt": "The puzzle piece laughing at a joke."
       },
       "incorrectAnswerImage": {
@@ -220,7 +220,7 @@
       "id": 7,
       "question": "Alright, brace yourself! I'm always hungry and need to be fed, yet the more I eat, the thinner I get. What am I, a dieting black hole?",
       "image": {
-        "src": "path/to/absurdImage8.jpg",
+        "src": "/assets/7.png",
         "alt": "A black hole reading a dieting book."
       },
       "choices": [
@@ -244,7 +244,7 @@
       "correctChoiceIndex": 2,
       "hint": "Think about something you use in school or for writing.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage8.jpg",
+        "src": "/assets/7cor.png",
         "alt": "The black hole sketching with a pencil."
       },
       "incorrectAnswerImage": {
@@ -256,7 +256,7 @@
       "id": 8,
       "question": "Here's a mind-boggler! I have keys but no locks. I have space but no room. You can enter, but can't go outside. What am I, a futuristic house?",
       "image": {
-        "src": "path/to/absurdImage9.jpg",
+        "src": "/assets/8.png",
         "alt": "A futuristic house with a giant keyboard as a door."
       },
       "choices": [
@@ -280,7 +280,7 @@
       "correctChoiceIndex": 0,
       "hint": "Think about something you use with your computer.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage9.jpg",
+        "src": "/assets/8cor.png",
         "alt": "The futuristic house turning into a giant keyboard."
       },
       "incorrectAnswerImage": {
@@ -290,45 +290,9 @@
     },
     {
       "id": 9,
-      "question": "Ok, here's a tricky one! The more you take, the more you leave behind. What am I, a picky thief with a big heart?",
-      "image": {
-        "src": "path/to/absurdImage10.jpg",
-        "alt": "A picky thief leaving footprints as he walks away with a stolen heart."
-      },
-      "choices": [
-        {
-          "text": "A generous millionaire who can't stop giving away money",
-          "feedback": "A generous millionaire? While they leave money behind, they don't leave more the more they take."
-        },
-        {
-          "text": "Footprints, but not the 'in the sand' kind",
-          "feedback": "You're leaving your mark! It's footprints. You're really stepping up your game!"
-        },
-        {
-          "text": "A very confusing game of 'Take 5'",
-          "feedback": "A game of 'Take 5'? It might be confusing, but it doesn't quite fit here."
-        },
-        {
-          "text": "An eccentric artist who leaves paintings wherever he goes",
-          "feedback": "An eccentric artist? That's an interesting idea, but it's not what we're looking for!"
-        }
-      ],
-      "correctChoiceIndex": 1,
-      "hint": "Think about something that gets left behind when you walk.",
-      "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage10.jpg",
-        "alt": "The picky thief looking surprised as he realizes he's left a trail of footprints."
-      },
-      "incorrectAnswerImage": {
-        "src": "do not change this",
-        "alt": "don't change this"
-      }
-    },
-    {
-      "id": 10,
       "question": "Here's a puzzler for you! I can be written, I can be spoken, I can be exposed, I can be broken. What am I, a secret agent's diary?",
       "image": {
-        "src": "path/to/absurdImage12.jpg",
+        "src": "/assets/9.png",
         "alt": "A secret agent's diary with a lock on it."
       },
       "choices": [
@@ -352,7 +316,7 @@
       "correctChoiceIndex": 2,
       "hint": "Think about something you might keep to yourself or share with a friend.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage12.jpg",
+        "src": "/assets/9cor.png",
         "alt": "The secret agent's diary revealing a secret message."
       },
       "incorrectAnswerImage": {
@@ -361,10 +325,10 @@
       }
     },
     {
-      "id": 11,
+      "id": 10,
       "question": "Get ready for a conundrum! I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I, a ghost?",
       "image": {
-        "src": "path/to/absurdImage14.jpg",
+        "src": "/assets/10.png",
         "alt": "A ghost floating in the wind."
       },
       "choices": [
@@ -388,7 +352,7 @@
       "correctChoiceIndex": 0,
       "hint": "Think about a sound that comes back to you.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage14.jpg",
+        "src": "/assets/10cor.png",
         "alt": "The ghost turning into an echoing sound wave."
       },
       "incorrectAnswerImage": {
@@ -397,10 +361,10 @@
       }
     },
     {
-      "id": 12,
+      "id": 11,
       "question": "Put your thinking hat on! I come down but never go up. What am I, a clumsy elevator?",
       "image": {
-        "src": "path/to/absurdImage15.jpg",
+        "src": "/assets/11.png",
         "alt": "An elevator with a 'down only' sign."
       },
       "choices": [
@@ -424,7 +388,7 @@
       "correctChoiceIndex": 0,
       "hint": "Think about something that falls from the sky.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage15.jpg",
+        "src": "/assets/11cor.png",
         "alt": "The elevator turning into a rain cloud."
       },
       "incorrectAnswerImage": {
@@ -433,10 +397,10 @@
       }
     },
     {
-      "id": 13,
+      "id": 12,
       "question": "Strap on your thinking cap! I'm not alive, but I can grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I, a paradox?",
       "image": {
-        "src": "path/to/absurdImage17.jpg",
+        "src": "/assets/12.png",
         "alt": "A paradoxical object floating in mid-air."
       },
       "choices": [
@@ -460,7 +424,7 @@
       "correctChoiceIndex": 0,
       "hint": "Think about something that needs air to exist but is extinguished by water.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage17.jpg",
+        "src": "/assets/12cor.png",
         "alt": "The paradoxical object turning into a flame."
       },
       "incorrectAnswerImage": {
@@ -469,10 +433,10 @@
       }
     },
     {
-      "id": 24,
+      "id": 13,
       "question": "Time for a brain teaser! I'm tall when I'm young and short when I'm old. What am I, a reverse growing beanstalk?",
       "image": {
-        "src": "path/to/absurdImage21.jpg",
+        "src": "/assets/13.png",
         "alt": "A beanstalk shrinking into a bean."
       },
       "choices": [
@@ -496,7 +460,7 @@
       "correctChoiceIndex": 0,
       "hint": "Think about something that gets smaller as it's used.",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage21.jpg",
+        "src": "/assets/13cor.png",
         "alt": "The shrinking beanstalk turning into a melting candle."
       },
       "incorrectAnswerImage": {
@@ -505,82 +469,10 @@
       }
     },
     {
-      "id": 15,
-      "question": "Alright, gumshoe! The more of me you take, the more you leave behind. What am I, a bizarre reverse thief?",
-      "image": {
-        "src": "path/to/absurdImage22.jpg",
-        "alt": "A cartoon thief leaving a trail of footprints."
-      },
-      "choices": [
-        {
-          "text": "Footsteps, but not the 'tiptoeing' kind",
-          "feedback": "You've stepped to the right answer! It's footsteps. Keep moving forward with these answers!"
-        },
-        {
-          "text": "A time-traveling reverse pickpocket",
-          "feedback": "A time-traveling reverse pickpocket? While it's an interesting concept, it's not the answer."
-        },
-        {
-          "text": "A generous baker with endless cookies",
-          "feedback": "A generous baker? While they might leave a trail of cookies, it's not the answer here."
-        },
-        {
-          "text": "A trail of breadcrumbs from an overly cautious hiker",
-          "feedback": "A trail of breadcrumbs? While it's left behind as you move, it's not the answer."
-        }
-      ],
-      "correctChoiceIndex": 0,
-      "hint": "Think about something you leave behind as you move.",
-      "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage22.jpg",
-        "alt": "The cartoon thief's footprints turning into a trail of footprints."
-      },
-      "incorrectAnswerImage": {
-        "src": "do not change this",
-        "alt": "don't change this"
-      }
-    },
-    {
-      "id": 16,
-      "question": "Brace yourself for this one! I'm a celestial body, but I'm not always in the sky. During the day, you can't see me, but at night, I'm your best buddy. I've been accused of changing shapes, but honestly, I'm just going through phases. What am I?",
-      "image": {
-        "src": "path/to/cartoon_moon.jpg",
-        "alt": "Cartoon moon in different phases"
-      },
-      "choices": [
-        {
-          "text": "A very confused cloud with an identity crisis",
-          "feedback": "Ha! A cloud with an identity crisis? Not quite, but that's a funny idea."
-        },
-        {
-          "text": "An emotional rainbow trying to find itself",
-          "feedback": "An emotional rainbow? That's a colorful guess, but no."
-        },
-        {
-          "text": "The Moon that's just trying to live its life",
-          "feedback": "Bravo! You got it! It's the Moon, our friendly neighbor in the night sky. And don't worry, it's not having an identity crisis, just going through its phases!"
-        },
-        {
-          "text": "A star with a flare for the dramatic",
-          "feedback": "A dramatic star? Nope, but that would make a great movie character."
-        }
-      ],
-      "correctChoiceIndex": 2,
-      "hint": "I'm not a star, but I shine at night. I'm also not a cloud, and rainbows are out of the question.",
-      "correctAnswerImage": {
-        "src": "path/to/cartoon_moon_smiling.jpg",
-        "alt": "Cartoon moon smiling"
-      },
-      "incorrectAnswerImage": {
-        "src": "do not change this",
-        "alt": "don't change this"
-      }
-    },
-    {
-      "id": 17,
+      "id": 14,
       "question": "Get ready for a wild ride! I'm a kind of king, but I don't wear a crown. I do my best work when I'm spinning, but I'm not a dancer. If you scratch me, it's not a big deal... unless you're a DJ! What am I?",
       "image": {
-        "src": "path/to/cartoon_vinyl.jpg",
+        "src": "/assets/14.png",
         "alt": "Cartoon vinyl record"
       },
       "choices": [
@@ -604,7 +496,7 @@
       "correctChoiceIndex": 2,
       "hint": "Think about something that spins and creates music, but isn't alive.",
       "correctAnswerImage": {
-        "src": "path/to/cartoon_vinyl_spinning.jpg",
+        "src": "/assets/14cor.png",
         "alt": "Cartoon vinyl record spinning"
       },
       "incorrectAnswerImage": {
@@ -613,10 +505,10 @@
       }
     },
     {
-      "id": 18,
+      "id": 15,
       "question": "Oh Sherlock, get ready for this one! I'm the heart of the home, yet I'm as cold as ice. I can hold a pizza party inside me, but I don't like to party myself. Who am I?",
       "image": {
-        "src": "path/to/funny_image_of_a_chilly_kitchen.jpg",
+        "src": "/assets/15.png",
         "alt": "Cartoon image of a shivering kitchen"
       },
       "choices": [
@@ -640,44 +532,8 @@
       "correctChoiceIndex": 1,
       "hint": "I'm in the kitchen, and I like to keep things cool!",
       "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage_of_a_cool_fridge.jpg",
+        "src": "/assets/15cor.png",
         "alt": "Cool refrigerator with a party hat"
-      },
-      "incorrectAnswerImage": {
-        "src": "do not change this",
-        "alt": "don't change this"
-      }
-    },
-    {
-      "id": 19,
-      "question": "Hey, riddle aficionado! I'm famous, I'm fictional, and I've got a big, bad problem with a certain color. Who am I?",
-      "image": {
-        "src": "path/to/image_of_a_frustrated_fictional_character.jpg",
-        "alt": "Fictional character looking at a paint color swatch in frustration"
-      },
-      "choices": [
-        {
-          "text": "Captain America, who has had it with the color red.",
-          "feedback": "Captain America, red? No, that's not it."
-        },
-        {
-          "text": "Superman, who simply cannot stand the color green.",
-          "feedback": "You're super too! It's Superman, who really isn't fond of green (especially kryptonite green)."
-        },
-        {
-          "text": "Batman, who's had enough of the color black.",
-          "feedback": "Batman, enough of black? Nope, he loves his dark hues!"
-        },
-        {
-          "text": "Spiderman, who's tangled up in his dislike of blue.",
-          "feedback": "A tangled guess! But Spiderman doesn't have a problem with blue."
-        }
-      ],
-      "correctChoiceIndex": 1,
-      "hint": "This character is 'super', but there's a certain color that's his 'kryptonite'.",
-      "correctAnswerImage": {
-        "src": "path/to/correctAnswerImage_of_superman.jpg",
-        "alt": "Superman with a green kryptonite"
       },
       "incorrectAnswerImage": {
         "src": "do not change this",

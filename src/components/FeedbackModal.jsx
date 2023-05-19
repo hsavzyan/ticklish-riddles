@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 function FeedbackModal({
   correct,
   riddle,
@@ -6,13 +8,14 @@ function FeedbackModal({
   resetUserChoice,
 }) {
   return (
-    <div>
-      <h2>
+    <div className="feedback-modal">
+      <h2 className="feedback-text">
         {correct
           ? riddle.choices[riddle.correctChoiceIndex].feedback
           : riddle.choices[userChoice].feedback}
       </h2>
       <img
+        className="feedback-image"
         src={
           correct
             ? riddle.correctAnswerImage.src
@@ -24,8 +27,16 @@ function FeedbackModal({
             : riddle.incorrectAnswerImage.alt
         }
       />
-      {!correct && <button onClick={resetUserChoice}>Try Again</button>}
-      <button onClick={moveToNextRiddle}>Next</button>
+      <div className="modal-btns">
+        {!correct && (
+          <button className="retry-btn" onClick={resetUserChoice}>
+            Try Again
+          </button>
+        )}
+        <button className="next-btn" onClick={moveToNextRiddle}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }
