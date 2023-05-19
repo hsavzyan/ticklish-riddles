@@ -1,7 +1,7 @@
 .riddle-modal {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
   padding: 20px;
   border-radius: 10px;
   max-width: 800px;
@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .choices-container:nth-child(odd) {
@@ -46,6 +46,7 @@
 }
 
 .choice-btn {
+  box-sizing: border-box;
   padding: 10px;
   margin: 0;
   border: none;

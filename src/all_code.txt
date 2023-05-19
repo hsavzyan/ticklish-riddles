@@ -46,7 +46,6 @@ button:hover {
   background-color: #007bff;
   color: white;
 }
-/* eslint-disable react/prop-types */
 import "./RiddleModal.css";
 
 function RiddleModal({ riddle, handleUserChoice }) {
@@ -59,15 +58,32 @@ function RiddleModal({ riddle, handleUserChoice }) {
         alt={riddle.image.alt}
       />
       <div className="choices-container">
-        {riddle.choices.map((choice, index) => (
-          <button
-            className="choice-btn"
-            key={index}
-            onClick={() => handleUserChoice(index)}
-          >
-            {choice.text}
-          </button>
-        ))}
+        {riddle.choices.map(
+          (choice, index) =>
+            index % 2 === 0 && (
+              <button
+                className="choice-btn"
+                key={index}
+                onClick={() => handleUserChoice(index)}
+              >
+                {choice.text}
+              </button>
+            )
+        )}
+      </div>
+      <div className="choices-container">
+        {riddle.choices.map(
+          (choice, index) =>
+            index % 2 !== 0 && (
+              <button
+                className="choice-btn"
+                key={index}
+                onClick={() => handleUserChoice(index)}
+              >
+                {choice.text}
+              </button>
+            )
+        )}
       </div>
     </div>
   );
@@ -177,7 +193,7 @@ button:hover {
 
 .intro-text {
   font-size: 1.44em; /* Increase font size */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .start-btn {
@@ -250,7 +266,7 @@ function EndScreen({ resetGame, returnToHomepage }) {
       <p className="end-screen-text">You've gone through all the riddles!</p>
       <img
         className="congrats-image"
-        src="path_to_your_image.jpg"
+        src="/assets/congrats-image.png"
         alt="Congratulations"
       />
       <div className="end-screen-btns">
@@ -267,36 +283,82 @@ function EndScreen({ resetGame, returnToHomepage }) {
 
 export default EndScreen;
 .riddle-modal {
-  width: 60%;
-  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  grid-template-areas:
+    "question image"
+    "choices1 choices2";
 }
 
 .riddle-question {
+  grid-area: question;
   font-size: 1.5em;
   font-weight: bold;
+  text-align: center;
+  padding: 20px;
 }
 
 .riddle-image {
-  width: 100%;
+  grid-area: image;
+  max-width: 100%;
   height: auto;
+  align-self: center;
 }
 
 .choices-container {
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  padding: 20px 0;
+  gap: 20px;
+}
+
+.choices-container:nth-child(odd) {
+  grid-area: choices1;
+}
+
+.choices-container:nth-child(even) {
+  grid-area: choices2;
 }
 
 .choice-btn {
-  flex-basis: 45%;
-  margin: 2%;
-  background-color: #28a745;
-  color: white;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff4500;
+  text-align: center;
+}
+
+.choice-btn:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .riddle-modal {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "question"
+      "image"
+      "choices1"
+      "choices2";
+  }
 }
 import React from "react";
 import ReactDOM from "react-dom/client";

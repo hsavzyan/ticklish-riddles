@@ -32,7 +32,7 @@
         "alt": "A dinosaur playing a grand piano."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor1.png",
         "alt": "don't change this"
       }
     },
@@ -68,7 +68,7 @@
         "alt": "A unicorn flipping a calendar page."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor1.png",
         "alt": "don't change this"
       }
     },
@@ -104,7 +104,7 @@
         "alt": "An alien squeezing a sponge filled with water."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor1.png",
         "alt": "don't change this"
       }
     },
@@ -140,7 +140,7 @@
         "alt": "The superhero holding an umbrella under a crying rain cloud."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor2.png",
         "alt": "don't change this"
       }
     },
@@ -176,7 +176,7 @@
         "alt": "The squirrel holding a map, looking like a tiny explorer."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor2.png",
         "alt": "don't change this"
       }
     },
@@ -212,7 +212,7 @@
         "alt": "The puzzle piece laughing at a joke."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor2.png",
         "alt": "don't change this"
       }
     },
@@ -248,7 +248,7 @@
         "alt": "The black hole sketching with a pencil."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor2.png",
         "alt": "don't change this"
       }
     },
@@ -284,7 +284,7 @@
         "alt": "The futuristic house turning into a giant keyboard."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor3.png",
         "alt": "don't change this"
       }
     },
@@ -320,7 +320,7 @@
         "alt": "The secret agent's diary revealing a secret message."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor3.png",
         "alt": "don't change this"
       }
     },
@@ -356,7 +356,7 @@
         "alt": "The ghost turning into an echoing sound wave."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor3.png",
         "alt": "don't change this"
       }
     },
@@ -392,7 +392,7 @@
         "alt": "The elevator turning into a rain cloud."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor3.png",
         "alt": "don't change this"
       }
     },
@@ -428,7 +428,7 @@
         "alt": "The paradoxical object turning into a flame."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor4.png",
         "alt": "don't change this"
       }
     },
@@ -464,7 +464,7 @@
         "alt": "The shrinking beanstalk turning into a melting candle."
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor4.png",
         "alt": "don't change this"
       }
     },
@@ -500,7 +500,7 @@
         "alt": "Cartoon vinyl record spinning"
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor4.png",
         "alt": "don't change this"
       }
     },
@@ -536,7 +536,7 @@
         "alt": "Cool refrigerator with a party hat"
       },
       "incorrectAnswerImage": {
-        "src": "do not change this",
+        "src": "/assets/incor4.png",
         "alt": "don't change this"
       }
     }

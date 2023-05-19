@@ -8,7 +8,7 @@ function EndScreen({ resetGame, returnToHomepage }) {
       <p className="end-screen-text">You've gone through all the riddles!</p>
       <img
         className="congrats-image"
-        src="path_to_your_image.jpg"
+        src="/assets/congrats-image.png"
         alt="Congratulations"
       />
       <div className="end-screen-btns">
