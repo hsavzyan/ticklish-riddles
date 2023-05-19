@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "./FeedbackModal.css";
 
 function FeedbackModal({
@@ -10,7 +9,7 @@ function FeedbackModal({
 }) {
   return (
     <div className="feedback-modal">
-      <h2 className="feedback-text">
+      <h2 className={`feedback-text ${correct ? "correct" : "incorrect"}`}>
         {correct
           ? riddle.choices[riddle.correctChoiceIndex].feedback
           : riddle.choices[userChoice].feedback}
