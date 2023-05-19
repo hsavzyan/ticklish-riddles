@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./EndScreen.css";
 
 function EndScreen({ resetGame, returnToHomepage }) {
   return (

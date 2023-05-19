@@ -1,4 +1,53 @@
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+} */
+.end-screen {
+  text-align: center;
+}
+
+.congrats-text {
+  font-size: 2.5em;
+  color: #007bff;
+}
+
+.congrats-image {
+  width: 60%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.play-again-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.return-home-btn {
+  background-color: #007bff;
+  color: white;
+}
 /* eslint-disable react/prop-types */
+import "./RiddleModal.css";
 
 function RiddleModal({ riddle, handleUserChoice }) {
   return (
@@ -26,6 +75,7 @@ function RiddleModal({ riddle, handleUserChoice }) {
 
 export default RiddleModal;
 /* eslint-disable react/prop-types */
+import "./Homepage.css";
 
 function Homepage({ startGame }) {
   return (
@@ -45,7 +95,109 @@ function Homepage({ startGame }) {
   );
 }
 export default Homepage;
+.feedback-modal {
+  /* Similar styles as the riddle modal */
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.feedback-text {
+  font-size: 1.5em;
+}
+
+.feedback-image {
+  width: 100%;
+  height: auto;
+}
+
+.retry-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.next-btn {
+  background-color: #007bff;
+  color: white;
+}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+body {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", cursive;
+  background-color: #ffebcd; /* A light, warm color for the background */
+  color: #4b0082; /* A playful, contrasting color for text */
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #32cd32; /* A playful color for buttons */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px; /* Increase button text size */
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.homepage {
+  text-align: center;
+  padding: 20px;
+  background: url("/path_to_your_background_image.jpg"); /* path to a fun, playful image */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.site-title {
+  font-size: 2.8em; /* Increase font size for title */
+  font-weight: bold;
+  color: #b22222; /* A playful color for the title */
+  text-shadow: 2px 2px #ffd700; /* Text shadow for title */
+}
+
+.site-tagline {
+  font-size: 1.6em; /* Increase font size for tagline */
+  font-style: italic;
+  color: #4b0082; /* A playful color for the tagline */
+  text-shadow: 1px 1px #ffd700; /* Text shadow for tagline */
+}
+
+.intro-text {
+  font-size: 1.2em; /* Increase font size for intro text */
+}
+
+.start-btn {
+  padding: 20px 40px; /* Increase button size */
+  font-size: 1.5em; /* Increase button text size */
+  background-color: #ffd700; /* A playful color for buttons */
+  color: #4b0082; /* Text color for button */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+}
+
+.footer {
+  background-color: #ffebcd;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
 /* eslint-disable react/prop-types */
+import "./FeedbackModal.css";
 
 function FeedbackModal({
   correct,
@@ -90,6 +242,7 @@ function FeedbackModal({
 
 export default FeedbackModal;
 /* eslint-disable react/prop-types */
+import "./EndScreen.css";
 
 function EndScreen({ resetGame, returnToHomepage }) {
   return (
@@ -114,6 +267,38 @@ function EndScreen({ resetGame, returnToHomepage }) {
 }
 
 export default EndScreen;
+.riddle-modal {
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.riddle-question {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.riddle-image {
+  width: 100%;
+  height: auto;
+}
+
+.choices-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.choice-btn {
+  flex-basis: 45%;
+  margin: 2%;
+  background-color: #28a745;
+  color: white;
+}
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -129,6 +314,7 @@ import RiddleModal from "./components/RiddleModal";
 import FeedbackModal from "./components/FeedbackModal";
 import riddlesData from "./riddles.json";
 import EndScreen from "./components/EndScreen";
+import "./App.css";
 
 function App() {
   const [riddles, setRiddles] = useState([]);

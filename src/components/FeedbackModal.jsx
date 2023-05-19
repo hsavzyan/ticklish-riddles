@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./FeedbackModal.css";
 
 function FeedbackModal({
   correct,

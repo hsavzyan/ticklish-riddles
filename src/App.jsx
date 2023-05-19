@@ -4,6 +4,7 @@ import RiddleModal from "./components/RiddleModal";
 import FeedbackModal from "./components/FeedbackModal";
 import riddlesData from "./riddles.json";
 import EndScreen from "./components/EndScreen";
+import "./App.css";
 
 function App() {
   const [riddles, setRiddles] = useState([]);

@@ -1,21 +1,67 @@
-/* Homepage.css */
+body {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", cursive;
+  background-color: #fdf5e6; /* Light and playful color for the background */
+  color: #4b0082; /* A playful, contrasting color for text */
+  line-height: 1.6;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 20px;
+  border: none;
+  border-radius: 50px; /* Gives buttons a unique rounded look */
+  background-color: #32cd32; /* A playful color for buttons */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
 .homepage {
   text-align: center;
-  padding-top: 20px;
+  padding: 20px;
+  background: url("/assets/bg1.png"); /* path to a fun, playful image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px; /* Makes the edges of the homepage content slightly rounded */
 }
 
-.homepage h1 {
-  font-size: 3em;
-  color: #2c3e50;
+.site-title {
+  font-size: 3.5em; /* Increase font size for title */
+  font-weight: bold;
+  color: #ff4500; /* A playful color for the title */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Increased text shadow for title */
 }
 
-.homepage p {
-  font-size: 1.3em;
-  line-height: 1.7em;
-  color: #34495e;
-  margin-bottom: 30px;
+.site-tagline {
+  font-size: 2em; /* Increase font size for tagline */
+  font-style: italic;
+  color: #4b0082; /* A playful color for the tagline */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Increased text shadow for tagline */
 }
 
-.homepage button {
-  font-size: 1.3em;
+.intro-text {
+  font-size: 1.2em; /* Increase font size for intro text */
+}
+
+.start-btn {
+  padding: 20px 40px; /* Increase button size */
+  font-size: 1.5em; /* Increase button text size */
+  background-color: #ffd700; /* A playful color for buttons */
+  color: #4b0082; /* Text color for button */
+}
+
+.footer {
+  background-color: #fdf5e6; /* Background color that matches the body's background */
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
 }

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./Homepage.css";
 
 function Homepage({ startGame }) {
   return (

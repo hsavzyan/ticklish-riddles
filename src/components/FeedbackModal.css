@@ -1,0 +1,28 @@
+.feedback-modal {
+  /* Similar styles as the riddle modal */
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.feedback-text {
+  font-size: 1.5em;
+}
+
+.feedback-image {
+  width: 100%;
+  height: auto;
+}
+
+.retry-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.next-btn {
+  background-color: #007bff;
+  color: white;
+}

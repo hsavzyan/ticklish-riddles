@@ -1,0 +1,24 @@
+.end-screen {
+  text-align: center;
+}
+
+.congrats-text {
+  font-size: 2.5em;
+  color: #007bff;
+}
+
+.congrats-image {
+  width: 60%;
+  height: auto;
+  margin: 20px auto;
+}
+
+.play-again-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.return-home-btn {
+  background-color: #007bff;
+  color: white;
+}

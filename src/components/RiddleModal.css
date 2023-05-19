@@ -1,0 +1,32 @@
+.riddle-modal {
+  width: 60%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.riddle-question {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.riddle-image {
+  width: 100%;
+  height: auto;
+}
+
+.choices-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.choice-btn {
+  flex-basis: 45%;
+  margin: 2%;
+  background-color: #28a745;
+  color: white;
+}

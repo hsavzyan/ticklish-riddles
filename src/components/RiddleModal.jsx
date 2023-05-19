@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "./RiddleModal.css";
 
 function RiddleModal({ riddle, handleUserChoice }) {
   return (
