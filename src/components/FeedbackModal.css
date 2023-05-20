@@ -12,6 +12,10 @@
 }
 
 .feedback-modal {
+  perspective: 1000px;
+  /* animation: flipInX 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; */
+  animation: bounceIn 1s both;
+
   max-height: 90vh;
   overflow: auto;
   width: 400px;
@@ -28,8 +32,9 @@
 }
 
 .feedback-text {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .feedback-text.correct {
@@ -68,7 +73,7 @@
 
 button {
   padding: 15px 30px;
-  margin: 20px;
+  margin: 0;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -80,4 +85,47 @@ button {
 
 button:hover {
   transform: scale(1.1);
+}
+
+/* @keyframes flipInX {
+  from {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateX(-10deg);
+  }
+  60% {
+    transform: perspective(400px) rotateX(5deg);
+  }
+  80% {
+    transform: perspective(400px) rotateX(-2deg);
+  }
+  to {
+    transform: perspective(400px);
+    opacity: 1;
+  }
+} */
+
+@keyframes bounceIn {
+  0% {
+    transform: translate3d(0, -3000px, 0);
+    visibility: visible;
+  }
+
+  60% {
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    transform: none;
+  }
 }

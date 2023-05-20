@@ -138,25 +138,43 @@ function Homepage({ startGame }) {
   );
 }
 export default Homepage;
+.feedback-modal-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
 .feedback-modal {
+  perspective: 1000px;
+  /* animation: flipInX 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards; */
+  animation: bounceIn 1s both;
+
   max-height: 90vh;
   overflow: auto;
   width: 400px;
-  margin: 0 auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #fdf5e6;
+  z-index: 11; /* a higher z-index than the parent */
+  /* transform: translate(-50%, -50%);
+  position: relative;
+  left: 50%;
+  top: 50%; */
 }
 
 .feedback-text {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .feedback-text.correct {
@@ -179,18 +197,77 @@ export default Homepage;
 }
 
 .retry-btn {
-  background-color: #dc3545;
+  background-color: #ff5722;
   color: white;
 }
 
 .next-btn {
-  background-color: #007bff;
+  background-color: #4caf50;
   color: white;
 }
 
 .modal-btns {
   display: flex;
   justify-content: space-around;
+}
+
+button {
+  padding: 15px 30px;
+  margin: 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 21.6px; /* Increase font size */
+  font-weight: bold;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* @keyframes flipInX {
+  from {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotateX(-10deg);
+  }
+  60% {
+    transform: perspective(400px) rotateX(5deg);
+  }
+  80% {
+    transform: perspective(400px) rotateX(-2deg);
+  }
+  to {
+    transform: perspective(400px);
+    opacity: 1;
+  }
+} */
+
+@keyframes bounceIn {
+  0% {
+    transform: translate3d(0, -3000px, 0);
+    visibility: visible;
+  }
+
+  60% {
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  100% {
+    transform: none;
+  }
 }
 button {
   padding: 15px 30px;
@@ -220,11 +297,12 @@ button:hover {
 }
 
 .site-title {
-  font-size: 3.5em; /* Increase font size */
+  font-size: 3em; /* Increase font size */
   font-weight: bold;
+  text-transform: uppercase;
   color: #ff4500;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; /* Reduce top margin to move title up */
+  margin-top: 10px; /* Reduce top margin to move title up */
   margin-bottom: 10px;
 }
 
@@ -236,6 +314,8 @@ button:hover {
 }
 
 .intro-text {
+  font-weight: bold;
+
   font-size: 1.44em; /* Increase font size */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
@@ -267,34 +347,36 @@ function FeedbackModal({
   resetUserChoice,
 }) {
   return (
-    <div className="feedback-modal">
-      <h2 className={`feedback-text ${correct ? "correct" : "incorrect"}`}>
-        {correct
-          ? riddle.choices[riddle.correctChoiceIndex].feedback
-          : riddle.choices[userChoice].feedback}
-      </h2>
-      <img
-        className="feedback-image"
-        src={
-          correct
-            ? riddle.correctAnswerImage.src
-            : riddle.incorrectAnswerImage.src
-        }
-        alt={
-          correct
-            ? riddle.correctAnswerImage.alt
-            : riddle.incorrectAnswerImage.alt
-        }
-      />
-      <div className="modal-btns">
-        {!correct && (
-          <button className="retry-btn" onClick={resetUserChoice}>
-            Try Again
+    <div className="feedback-modal-parent">
+      <div className="feedback-modal">
+        <h2 className={`feedback-text ${correct ? "correct" : "incorrect"}`}>
+          {correct
+            ? riddle.choices[riddle.correctChoiceIndex].feedback
+            : riddle.choices[userChoice].feedback}
+        </h2>
+        <img
+          className="feedback-image"
+          src={
+            correct
+              ? riddle.correctAnswerImage.src
+              : riddle.incorrectAnswerImage.src
+          }
+          alt={
+            correct
+              ? riddle.correctAnswerImage.alt
+              : riddle.incorrectAnswerImage.alt
+          }
+        />
+        <div className="modal-btns">
+          {!correct && (
+            <button className="retry-btn" onClick={resetUserChoice}>
+              Try Again
+            </button>
+          )}
+          <button className="next-btn" onClick={moveToNextRiddle}>
+            Next
           </button>
-        )}
-        <button className="next-btn" onClick={moveToNextRiddle}>
-          Next
-        </button>
+        </div>
       </div>
     </div>
   );
@@ -354,8 +436,9 @@ export default EndScreen;
   max-width: 800px;
   max-height: 90vh;
   overflow: auto;
+  background-color: #fdf5e6;
+
   /* margin: 20px auto; */
-  background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   grid-template-areas:
     "question image"
@@ -364,7 +447,7 @@ export default EndScreen;
 
 .riddle-question {
   grid-area: question;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   padding: 20px;

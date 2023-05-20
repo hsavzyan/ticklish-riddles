@@ -26,11 +26,12 @@ button:hover {
 }
 
 .site-title {
-  font-size: 3.5em; /* Increase font size */
+  font-size: 3em; /* Increase font size */
   font-weight: bold;
+  text-transform: uppercase;
   color: #ff4500;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 20px; /* Reduce top margin to move title up */
+  margin-top: 10px; /* Reduce top margin to move title up */
   margin-bottom: 10px;
 }
 
@@ -42,6 +43,8 @@ button:hover {
 }
 
 .intro-text {
+  font-weight: bold;
+
   font-size: 1.44em; /* Increase font size */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
