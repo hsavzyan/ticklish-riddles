@@ -1,24 +1,10 @@
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #343a40;
+html,
+body {
+  height: 100%;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Comic Neue", cursive;
+  background: url("/assets/bg4.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #4b0082;
   line-height: 1.6;
+  font-size: 1.2em;
 }
-
-h1,
-h2 {
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: scale(1.1);
-} */
