@@ -23,7 +23,7 @@
   font-size: 1.3em; /* Decrease the font size */
   color: #4b0082;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  margin: 10px;
+  margin: 0;
 }
 
 .congrats-image {
@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  margin-top: 0;
 }
 
 .play-again-btn,

@@ -13,6 +13,12 @@ function App() {
   const [correct, setCorrect] = useState(false);
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
+  const [totalRiddles, setTotalRiddles] = useState(0);
+
+  useEffect(() => {
+    setRiddles(riddlesData.riddles);
+    setTotalRiddles(riddlesData.riddles.length); // Set total riddles at start
+  }, []);
 
   useEffect(() => {
     setRiddles(riddlesData.riddles);
@@ -82,6 +88,8 @@ function App() {
         <RiddleModal
           riddle={currentRiddle}
           handleUserChoice={handleUserChoice}
+          totalRiddles={totalRiddles}
+          remainingRiddles={riddles.length}
         />
       )}
       {showFeedbackModal && (

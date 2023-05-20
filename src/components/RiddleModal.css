@@ -31,7 +31,8 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   grid-template-areas:
     "question image"
-    "choices1 choices2";
+    "choices1 choices2"
+    "progress progress";
 }
 
 .riddle-question {
@@ -57,7 +58,9 @@
   background-color: green; /* you can choose any color */
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -123,6 +126,16 @@
   transform: scale(1.1);
 }
 
+.riddle-progress {
+  grid-area: progress;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: #ff4500;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 @media (max-width: 768px) {
   .riddle-modal {
     grid-template-columns: 1fr;
@@ -130,6 +143,7 @@
       "question"
       "image"
       "choices1"
-      "choices2";
+      "choices2"
+      "progress";
   }
 }

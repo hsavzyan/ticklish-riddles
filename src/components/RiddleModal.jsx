@@ -3,8 +3,15 @@
 import { useState } from "react";
 import "./RiddleModal.css";
 
-function RiddleModal({ riddle, handleUserChoice }) {
+function RiddleModal({
+  riddle,
+  handleUserChoice,
+  totalRiddles,
+  remainingRiddles,
+}) {
   const [hintShown, setHintShown] = useState(false);
+
+  const currentRiddleNumber = totalRiddles - remainingRiddles + 1;
 
   const handleHintClick = () => {
     setHintShown(!hintShown);
@@ -14,6 +21,9 @@ function RiddleModal({ riddle, handleUserChoice }) {
     <div className="riddle-modal-parent">
       <div className="riddle-modal">
         <h2 className="riddle-question">{riddle.question}</h2>
+        <p className="riddle-progress">
+          Riddle {currentRiddleNumber} of {totalRiddles}
+        </p>
         <div className="riddle-image-container">
           <img
             className="riddle-image"
