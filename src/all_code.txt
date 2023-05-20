@@ -12,7 +12,7 @@ body {
 .end-screen {
   display: grid;
   place-items: center;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow: auto;
   height: 100vh;
   text-align: center;
@@ -23,23 +23,26 @@ body {
 }
 
 .congrats-text {
-  font-size: 2em; /* Decrease the font size */
+  font-size: 1.7em; /* Decrease the font size */
   color: #ff4500;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
 
 .end-screen-text {
-  font-size: 1.5em; /* Decrease the font size */
+  font-size: 1.3em; /* Decrease the font size */
   color: #4b0082;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   margin: 10px;
 }
 
 .congrats-image {
+  max-width: 400px;
   width: 65%;
   height: auto;
   margin: 20px auto;
+  margin-top: 0;
+  margin-bottom: 0;
   border-radius: 20px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
@@ -73,18 +76,38 @@ body {
 }
 /* eslint-disable react/prop-types */
 
+import { useState } from "react";
 import "./RiddleModal.css";
 
 function RiddleModal({ riddle, handleUserChoice }) {
+  const [hintShown, setHintShown] = useState(false);
+
+  const handleHintClick = () => {
+    setHintShown(!hintShown);
+  };
+
   return (
     <div className="riddle-modal-parent">
       <div className="riddle-modal">
         <h2 className="riddle-question">{riddle.question}</h2>
-        <img
-          className="riddle-image"
-          src={riddle.image.src}
-          alt={riddle.image.alt}
-        />
+        <div className="riddle-image-container">
+          <img
+            className="riddle-image"
+            src={riddle.image.src}
+            alt={riddle.image.alt}
+          />
+          <button
+            className={`hint-btn ${hintShown ? "hint-shown" : ""}`}
+            onClick={handleHintClick}
+          >
+            {hintShown ? "Hide Hint" : "Hint"}
+          </button>
+          {hintShown && (
+            <div className="hint-text">
+              <p>{riddle.hint}</p>
+            </div>
+          )}
+        </div>
         <div className="choices-container">
           {riddle.choices.map(
             (choice, index) =>
@@ -451,6 +474,41 @@ export default EndScreen;
   font-weight: bold;
   text-align: center;
   padding: 20px;
+}
+
+.riddle-image-container {
+  position: relative;
+  grid-area: image;
+  max-width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.hint-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: green; /* you can choose any color */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hint-btn.hint-shown {
+  background-color: grey;
+}
+
+.hint-text {
+  position: absolute;
+  bottom: 40px; /* adjust as needed */
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 10px;
+  width: 80%; /* adjust as needed */
+  text-align: center;
 }
 
 .riddle-image {

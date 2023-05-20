@@ -2,7 +2,7 @@
 .end-screen {
   display: grid;
   place-items: center;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow: auto;
   height: 100vh;
   text-align: center;
@@ -13,23 +13,26 @@
 }
 
 .congrats-text {
-  font-size: 2em; /* Decrease the font size */
+  font-size: 1.7em; /* Decrease the font size */
   color: #ff4500;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   margin: 0;
 }
 
 .end-screen-text {
-  font-size: 1.5em; /* Decrease the font size */
+  font-size: 1.3em; /* Decrease the font size */
   color: #4b0082;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   margin: 10px;
 }
 
 .congrats-image {
+  max-width: 400px;
   width: 65%;
   height: auto;
   margin: 20px auto;
+  margin-top: 0;
+  margin-bottom: 0;
   border-radius: 20px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
