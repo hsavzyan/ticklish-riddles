@@ -46,7 +46,7 @@
 
 .play-again-btn,
 .return-home-btn {
-  background-color: #32cd32;
+  background-color: #396fff;
   color: white;
   padding: 15px;
   border: none;
@@ -63,5 +63,5 @@
 .play-again-btn:hover,
 .return-home-btn:hover {
   transform: scale(1.1);
-  background-color: #ffd700;
+  background-color: #ff396d;
 }

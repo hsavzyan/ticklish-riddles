@@ -26,34 +26,36 @@ button:hover {
 }
 
 .site-title {
-  font-size: 3em; /* Increase font size */
+  font-size: 2.2em; /* Increase font size */
   font-weight: bold;
   text-transform: uppercase;
-  color: #ff4500;
+  color: #ff396d;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   margin-top: 10px; /* Reduce top margin to move title up */
   margin-bottom: 10px;
 }
 
 .site-tagline {
-  font-size: 2.4em; /* Increase font size */
-  font-style: italic;
-  color: #4b0082;
+  font-size: 1.6em;
+  margin-top: 0;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #000080;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .intro-text {
   font-weight: bold;
-
-  font-size: 1.44em; /* Increase font size */
+  color: #000080;
+  font-size: 1.1em;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .start-btn {
   padding: 20px 40px;
   font-size: 1.8em; /* Increase font size */
-  background-color: #ffd700;
-  color: #4b0082;
+  background-color: #ff396d;
+  color: #00ffff;
 }
 
 .footer {
