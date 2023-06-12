@@ -4,7 +4,7 @@
       "id": 1,
       "question": "Oh, you'll love this! I'm filled with keys but can't open a single door. I can produce melodies but can't sing a song. What am I, a magical creature from the land of impossibility?",
       "image": {
-        "src": "/public/assets/1.png",
+        "src": "/assets/1.png",
         "alt": "A dinosaur trying to open a door with a bunch of keys."
       },
       "choices": [
