@@ -1,7 +1,7 @@
 Ticklish Riddles
 ================
 
-Ticklish Riddles is a fun and interactive riddle game built with React. The application presents users with a series of riddles, each accompanied by a set of multiple-choice answers. The application uses Vite as the build tool and Yarn as the package manager.
+Ticklish Riddles is a fun and interactive riddle game built with React. The application presents users with a series of riddles, each accompanied by a set of multiple-choice answers. Riddles are provided by ChatGPT, while images are sourced from Midjourney and Bing Image Creator. The application uses Vite as the build tool and Yarn as the package manager.
 
 Features
 --------
